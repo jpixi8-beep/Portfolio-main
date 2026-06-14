@@ -1,77 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – Jorge A. Fuentes (Lechu)</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #0d1117; color: #c9d1d9; }
-    h1, h2 { color: #58a6ff; }
-    h3 { color: #79c0ff; }
-    .proyectos { margin-top: 20px; }
-    .proyecto { background: #161b22; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
-    a { color: #58a6ff; text-decoration: none; }
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #1f242d;
+      --text: #e6edf3;
+      --muted: #a5b0bb;
+      --accent: #58a6ff;
+      --accent-2: #79c0ff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0d1117 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .hero {
+      background: rgba(22, 27, 34, 0.92);
+      border: 1px solid #30363d;
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    h1, h2, h3 { color: var(--accent-2); }
+    h1 { font-size: 2rem; margin-bottom: 10px; }
+    h2 { font-size: 1.2rem; margin-bottom: 8px; }
+    p { color: var(--text); }
+    .muted { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1f6feb;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
     a:hover { text-decoration: underline; }
-    .tecnologia { margin-top: 40px; }
-    .fase { margin-left: 20px; }
+
+    ul { padding-left: 18px; color: var(--text); }
+    li { margin-bottom: 6px; }
+
+    .footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
-  <h1>🌱 Portfolio – Jorge A. Fuentes (Lechu)</h1>
-  <p>Estos son mis proyectos del <strong>2026</strong>, organizados por tecnologías y fases de desarrollo.</p>
-  <p>Siéntete libre de explorar 🚀</p>
+  <main>
+    <section class="hero">
+      <h1>🌱 Portfolio – Jorge A. Fuentes (Lechu)</h1>
+      <p>Este espacio reúne mi camino como desarrollador: fundamentos, ejercicios prácticos y proyectos en crecimiento.</p>
+      <p class="muted">La idea es mostrar progreso por tecnologías, mantener un portafolio organizado y usarlo como referencia personal y profesional.</p>
+    </section>
 
-  <!-- C# -->
-  <div class="tecnologia">
-    <h2>🔹 C#</h2>
-    <div class="fase">
-      <h3>Fase 1 – Fundamentos</h3>
-      <div class="proyecto">
-        <h4>Calculadora Científica</h4>
-        <p>Proyecto básico en C# con interfaz gráfica.</p>
-        <a href="https://github.com/lechugas/portfolio/tree/main/C#/Fase1_Fundamentos/CalculadoraCientifica">Ver repositorio</a>
+    <section>
+      <h2>🎯 ¿Qué encontrarás aquí?</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Fundamentos</span>
+          <p>Sintaxis, lógica, estructuras básicas y conceptos clave de cada lenguaje.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Ejercicios</span>
+          <p>Retos prácticos para reforzar lo aprendido y desarrollar buenas bases de programación.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Proyectos</span>
+          <p>Aplicaciones y mini sistemas que muestran cómo resuelvo problemas reales con código.</p>
+        </article>
       </div>
-      <div class="proyecto">
-        <h4>Gestor de Tareas</h4>
-        <p>CRUD con SQLite para organizar tareas.</p>
-        <a href="https://github.com/lechugas/portfolio/tree/main/C#/Fase1_Fundamentos/GestorTareas">Ver repositorio</a>
+    </section>
+
+    <section style="margin-top: 28px;">
+      <h2>📂 Estructura general</h2>
+      <div class="card">
+        <ul>
+          <li>C</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Flutter / Dart</li>
+          <li>Python, Java, Go, TypeScript y más (en aprendizaje)</li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- JavaScript -->
-  <div class="tecnologia">
-    <h2>🔹 JavaScript (ES6)</h2>
-    <p>(Próximamente)</p>
-  </div>
+    <section style="margin-top: 28px;">
+      <h2>🌐 Sitio Web</h2>
+      <div class="card">
+        <p>Este portafolio también estará disponible en GitHub Pages:</p>
+        <p><a href="https://lechudev.github.io/Porfolio" target="_blank" rel="noopener">Ver Portfolio Web</a></p>
+      </div>
+    </section>
 
-  <!-- PHP -->
-  <div class="tecnologia">
-    <h2>🔹 PHP</h2>
-    <p>(Próximamente)</p>
-  </div>
-
-  <!-- Python -->
-  <div class="tecnologia">
-    <h2>🔹 Python</h2>
-    <p>(Próximamente)</p>
-  </div>
-
-  <!-- Java -->
-  <div class="tecnologia">
-    <h2>🔹 Java</h2>
-    <p>(Próximamente)</p>
-  </div>
-
-  <!-- Go -->
-  <div class="tecnologia">
-    <h2>🔹 Go (Golang)</h2>
-    <p>(Próximamente)</p>
-  </div>
-
-  <!-- TypeScript -->
-  <div class="tecnologia">
-    <h2>🔹 TypeScript</h2>
-    <p>(Próximamente)</p>
-  </div>
+    <p class="footer">Nota: esta versión es una base inicial. Posteriormente se irán agregando enlaces, proyectos destacados y una portada visual más completa.</p>
+  </main>
 </body>
 </html>

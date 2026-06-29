@@ -33,7 +33,7 @@ Mi idea es organizar el contenido por lenguaje y mantenerlo fácil de navegar:
 
 Este portafolio también estará disponible en GitHub Pages:
 
-👉 [Portfolio Web](https://lechudev.github.io/Porfolio)
+👉 [Portfolio Web](https://lechudev.github.io/Portfolio)
 
 ---
 
